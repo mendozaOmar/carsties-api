@@ -37,3 +37,4 @@
 /Users/OmarMendoza/Apps/Carsties/src/AuctionService/bin/Debug/net7.0/System.CodeDom.dll
 /Users/OmarMendoza/Apps/Carsties/src/AuctionService/obj/Debug/net7.0/AuctionService.csproj.AssemblyReference.cache
 /Users/OmarMendoza/Apps/Carsties/src/AuctionService/obj/Debug/net7.0/AuctionS.72D7E915.Up2Date
+/Users/OmarMendoza/Apps/Carsties/src/AuctionService/obj/Debug/net7.0/AuctionService.sourcelink.json

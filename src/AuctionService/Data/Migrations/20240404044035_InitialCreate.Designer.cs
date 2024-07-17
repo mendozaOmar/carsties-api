@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AuctionService.Data.Migrations
 {
     [DbContext(typeof(AuctionDBContext))]
-    [Migration("20240214021651_InitialCreate")]
+    [Migration("20240404044035_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -63,7 +63,7 @@ namespace AuctionService.Data.Migrations
                     b.ToTable("Auctions");
                 });
 
-            modelBuilder.Entity("AuctionService.Entities.Item", b =>
+            modelBuilder.Entity("AuctionService.Item", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -95,14 +95,14 @@ namespace AuctionService.Data.Migrations
                     b.HasIndex("AuctionId")
                         .IsUnique();
 
-                    b.ToTable("Item");
+                    b.ToTable("Items");
                 });
 
-            modelBuilder.Entity("AuctionService.Entities.Item", b =>
+            modelBuilder.Entity("AuctionService.Item", b =>
                 {
                     b.HasOne("AuctionService.Entities.Auction", "Auction")
                         .WithOne("Item")
-                        .HasForeignKey("AuctionService.Entities.Item", "AuctionId")
+                        .HasForeignKey("AuctionService.Item", "AuctionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

@@ -1,0 +1,25 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "carsties_auctions_db",
+            "group": "Servers",
+            "database": "auctions",
+            "username": "postgres"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "carsties-docker",
+            "database": "auctions",
+            "username": "postgres"
+        }
+    ]
+}

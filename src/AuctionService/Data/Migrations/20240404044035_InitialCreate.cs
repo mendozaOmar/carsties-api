@@ -32,7 +32,7 @@ namespace AuctionService.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Item",
+                name: "Items",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -46,9 +46,9 @@ namespace AuctionService.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Item", x => x.Id);
+                    table.PrimaryKey("PK_Items", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Item_Auctions_AuctionId",
+                        name: "FK_Items_Auctions_AuctionId",
                         column: x => x.AuctionId,
                         principalTable: "Auctions",
                         principalColumn: "Id",
@@ -56,8 +56,8 @@ namespace AuctionService.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Item_AuctionId",
-                table: "Item",
+                name: "IX_Items_AuctionId",
+                table: "Items",
                 column: "AuctionId",
                 unique: true);
         }
@@ -66,7 +66,7 @@ namespace AuctionService.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Item");
+                name: "Items");
 
             migrationBuilder.DropTable(
                 name: "Auctions");
